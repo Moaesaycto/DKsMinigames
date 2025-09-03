@@ -1,0 +1,19 @@
+ping-message: "Pong! Your latency is %ping% ms."
+hub:
+  spawn: { x: 0, y: 65, z: 0 }
+game-defaults:
+  countdown: 5
+  end-wait: 3
+games:
+  - name: BlockParty
+    spawn: { x: 1000, y: 100, z: 1000, facing: north }
+    arena: { x1: 988, y1: 95, z1: 990, x2: 1012, y2: 95, z2: 966 }
+    min-players: 1
+    primary-color: aqua
+    secondary-color: gold
+  - name: ElectricFloor
+    spawn: { x: 0, y: 100, z: 0 }
+    arena: { x1: -15, y1: 97, z1: 5, x2: 15, y2: 97, z2: 36 }
+    min-players: 1
+    primary-color: light_purple
+    secondary-color: aqua

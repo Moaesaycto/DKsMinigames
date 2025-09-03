@@ -1,0 +1,16 @@
+name: DKsMinigames
+version: '1.0-SNAPSHOT'
+main: DKsMinigames.dKsMinigames.DKsMinigames
+api-version: '1.21'
+commands:
+  ping:
+    description: Replies with Pong and your latency
+    usage: /ping
+  blockparty:
+    description: BlockParty commands
+    usage: /blockparty <start|end|join|leave|players|highscore|...>
+    aliases: [ bp ]
+  electricfloor:
+    description: ElectricFloor commands
+    usage: /electricfloor <start|end|join|leave|players|highscore|...>
+    aliases: [ ef ]
