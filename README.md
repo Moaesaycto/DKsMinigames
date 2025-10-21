@@ -21,8 +21,8 @@ A Paper 1.21.x plugin that revives classic "[Hive](https://playhive.com/)"-style
 
 ## Commands (from `plugin.yml`)
 
-* `/ping` — replies with Pong + latency.
-* `/debug` — debug tools (incl. spawning power-ups); **permission:** `dks.debug`.
+* `/ping`: replies with Pong + latency.
+* `/debug`: debug tools (incl. spawning power-ups); **permission:** `dks.debug`.
 * `/blockparty <start|end|join|leave|players|highscore|...>` (**alias:** `/bp`).
 * `/electricfloor <start|end|join|leave|players|highscore|...>` (**alias:** `/ef`).
 
@@ -47,4 +47,4 @@ A Paper 1.21.x plugin that revives classic "[Hive](https://playhive.com/)"-style
 
 ## Permissions
 
-* `dks.debug` — default `op` (for testing/admin utilities).
+* `dks.debug`: default `op` (for testing/admin utilities).
