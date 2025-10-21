@@ -10,6 +10,7 @@ import org.bukkit.entity.FallingBlock;
 import org.bukkit.plugin.Plugin;
 
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class EFMap {
     private final Plugin plugin;
@@ -230,6 +231,7 @@ public class EFMap {
         return best;
     }
 
+
     private boolean isStagedSolid(Location l) {
         if (l == null || !isOnArenaFloor(l)) return false;
         Material m = l.getBlock().getType();
@@ -258,4 +260,25 @@ public class EFMap {
         int maxZ = Math.max(p.getBlockZ(), q.getBlockZ());
         return new Region(p.getWorld(), p.getBlockY(), minX, minZ, maxX, maxZ);
     }
+
+    public Location getRandomArenaLocation() {
+        return getRandomArenaLocation(false);
+    }
+
+    public Location getRandomArenaLocation(boolean safe) {
+        int x, z;
+        int y = arena.y;
+        int tries = 0;
+        do {
+            x = ThreadLocalRandom.current().nextInt(arena.minX + 2, arena.maxX - 1);
+            z = ThreadLocalRandom.current().nextInt(arena.minZ + 2, arena.maxZ - 1);
+            tries++;
+            if (tries > 1000) { // fallback to prevent infinite loop
+                Bukkit.getLogger().info("[EFMap] Cannot find safe place to spawn power-up. Skipping... ");
+            }
+        } while (safe && (!arena.world.getBlockAt(x, y, z).getType().isSolid()));
+
+        return new Location(arena.world, x, y + 1, z);
+    }
+
 }

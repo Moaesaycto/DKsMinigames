@@ -94,6 +94,12 @@ public abstract class Minigame implements Listener {
         log(this.name + " has been initialized");
     }
 
+    public final void disable() {
+        onDisable();
+    }
+
+    protected void onDisable() {}
+
     protected boolean canStart() {
         return playerCount() >= minPlayers && this.state == State.LOBBY;
     }

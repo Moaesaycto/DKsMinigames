@@ -8,6 +8,7 @@ import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.util.List;
 import java.util.Locale;
@@ -23,7 +24,7 @@ public class BlockParty extends Minigame {
     private static final int DECR_TIME = 5; // ticks per round
 
     // ===== State =====
-    private org.bukkit.scheduler.BukkitTask roundBarTask;
+    private BukkitTask roundBarTask;
     private List<Location> arenaCoords;
     private int scout_time = MAX_SCOUT_TIME;
     private Material curr_material;

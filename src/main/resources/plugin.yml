@@ -6,6 +6,10 @@ commands:
   ping:
     description: Replies with Pong and your latency
     usage: /ping
+  debug:
+    description: Debug utilities
+    usage: /<command> powerup [x y z]
+    permission: dks.debug
   blockparty:
     description: BlockParty commands
     usage: /blockparty <start|end|join|leave|players|highscore|...>
@@ -14,3 +18,6 @@ commands:
     description: ElectricFloor commands
     usage: /electricfloor <start|end|join|leave|players|highscore|...>
     aliases: [ ef ]
+permissions:
+  dks.debug:
+    default: op
