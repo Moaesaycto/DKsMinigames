@@ -36,7 +36,7 @@ A Paper 1.21.x plugin that revives classic "[Hive](https://playhive.com/)"-style
 
 * Built-in power-up system; trigger via gameplay or `/debug powerup [x y z]` for testing.
 
-###Extending (add a new game)
+## Extending (add a new game)
 
 1. **Extend the abstract `Minigame` class.**
 2. Implement the core lifecycle and hooks you need (player join/leave, start/stop, tick/round logic, win/lose, scoreboard).
